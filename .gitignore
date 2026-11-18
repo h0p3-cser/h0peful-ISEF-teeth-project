@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 生成结果（可由脚本重跑得到，不入库）
+out/
+
+# macOS
+.DS_Store
