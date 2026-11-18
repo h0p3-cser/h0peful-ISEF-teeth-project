@@ -1,0 +1,27 @@
+# Downloaded inputs and generated outputs
+/data/
+/outputs/
+/runs/
+/weights/
+/datasets/
+*.zip
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.cache
+*.log
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+*.webp
+
+# Local environments and configuration
+.env
+.env.*
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+.venv/

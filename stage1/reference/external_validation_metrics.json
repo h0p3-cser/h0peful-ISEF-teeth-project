@@ -1,0 +1,260 @@
+{
+  "purpose": "strict zero-shot cross-dataset external validation of the RGB baseline",
+  "no_fine_tuning_on_target": true,
+  "A_cariesspectra_to_zenodo": {
+    "direction": "CariesSpectra -> Zenodo test",
+    "protocols": {
+      "full_resize": {
+        "metrics_at_0_5": {
+          "n": 825,
+          "positives": 287,
+          "negatives": 538,
+          "threshold": 0.5,
+          "tp": 268,
+          "fp": 495,
+          "tn": 43,
+          "fn": 19,
+          "accuracy": 0.377,
+          "sensitivity": 0.9338,
+          "specificity": 0.0799,
+          "precision": 0.3512,
+          "npv": 0.6935,
+          "f1": 0.5105,
+          "balanced_accuracy": 0.5069,
+          "auroc": 0.5251,
+          "confusion_matrix": [
+            [
+              43,
+              495
+            ],
+            [
+              19,
+              268
+            ]
+          ]
+        },
+        "metrics_at_0_3": {
+          "n": 825,
+          "positives": 287,
+          "negatives": 538,
+          "threshold": 0.3,
+          "tp": 277,
+          "fp": 523,
+          "tn": 15,
+          "fn": 10,
+          "accuracy": 0.3539,
+          "sensitivity": 0.9652,
+          "specificity": 0.0279,
+          "precision": 0.3463,
+          "npv": 0.6,
+          "f1": 0.5097,
+          "balanced_accuracy": 0.4965,
+          "auroc": 0.5251,
+          "confusion_matrix": [
+            [
+              15,
+              523
+            ],
+            [
+              10,
+              277
+            ]
+          ]
+        }
+      },
+      "center_crop": {
+        "metrics_at_0_5": {
+          "n": 825,
+          "positives": 287,
+          "negatives": 538,
+          "threshold": 0.5,
+          "tp": 265,
+          "fp": 509,
+          "tn": 29,
+          "fn": 22,
+          "accuracy": 0.3564,
+          "sensitivity": 0.9233,
+          "specificity": 0.0539,
+          "precision": 0.3424,
+          "npv": 0.5686,
+          "f1": 0.4995,
+          "balanced_accuracy": 0.4886,
+          "auroc": 0.4887,
+          "confusion_matrix": [
+            [
+              29,
+              509
+            ],
+            [
+              22,
+              265
+            ]
+          ]
+        },
+        "metrics_at_0_3": {
+          "n": 825,
+          "positives": 287,
+          "negatives": 538,
+          "threshold": 0.3,
+          "tp": 279,
+          "fp": 526,
+          "tn": 12,
+          "fn": 8,
+          "accuracy": 0.3527,
+          "sensitivity": 0.9721,
+          "specificity": 0.0223,
+          "precision": 0.3466,
+          "npv": 0.6,
+          "f1": 0.511,
+          "balanced_accuracy": 0.4972,
+          "auroc": 0.4887,
+          "confusion_matrix": [
+            [
+              12,
+              526
+            ],
+            [
+              8,
+              279
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "B_zenodo_yolo_to_cariesspectra": {
+    "direction": "Zenodo YOLO -> CariesSpectra test",
+    "by_threshold": {
+      "0.05": {
+        "n": 300,
+        "positives": 240,
+        "negatives": 60,
+        "threshold": 0.05,
+        "tp": 15,
+        "fp": 2,
+        "tn": 58,
+        "fn": 225,
+        "accuracy": 0.2433,
+        "sensitivity": 0.0625,
+        "specificity": 0.9667,
+        "precision": 0.8824,
+        "npv": 0.2049,
+        "f1": 0.1167,
+        "balanced_accuracy": 0.5146,
+        "auroc": 0.5775,
+        "confusion_matrix": [
+          [
+            58,
+            2
+          ],
+          [
+            225,
+            15
+          ]
+        ]
+      },
+      "0.1": {
+        "n": 300,
+        "positives": 240,
+        "negatives": 60,
+        "threshold": 0.1,
+        "tp": 10,
+        "fp": 0,
+        "tn": 60,
+        "fn": 230,
+        "accuracy": 0.2333,
+        "sensitivity": 0.0417,
+        "specificity": 1.0,
+        "precision": 1.0,
+        "npv": 0.2069,
+        "f1": 0.08,
+        "balanced_accuracy": 0.5208,
+        "auroc": 0.5775,
+        "confusion_matrix": [
+          [
+            60,
+            0
+          ],
+          [
+            230,
+            10
+          ]
+        ]
+      },
+      "0.25": {
+        "n": 300,
+        "positives": 240,
+        "negatives": 60,
+        "threshold": 0.25,
+        "tp": 3,
+        "fp": 0,
+        "tn": 60,
+        "fn": 237,
+        "accuracy": 0.21,
+        "sensitivity": 0.0125,
+        "specificity": 1.0,
+        "precision": 1.0,
+        "npv": 0.202,
+        "f1": 0.0247,
+        "balanced_accuracy": 0.5062,
+        "auroc": 0.5775,
+        "confusion_matrix": [
+          [
+            60,
+            0
+          ],
+          [
+            237,
+            3
+          ]
+        ]
+      },
+      "0.5": {
+        "n": 300,
+        "positives": 240,
+        "negatives": 60,
+        "threshold": 0.5,
+        "tp": 0,
+        "fp": 0,
+        "tn": 60,
+        "fn": 240,
+        "accuracy": 0.2,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "precision": 0.0,
+        "npv": 0.2,
+        "f1": 0.0,
+        "balanced_accuracy": 0.5,
+        "auroc": 0.5775,
+        "confusion_matrix": [
+          [
+            60,
+            0
+          ],
+          [
+            240,
+            0
+          ]
+        ]
+      }
+    },
+    "per_class_detection_at_0_25": {
+      "early": {
+        "n": 120,
+        "detected": 0,
+        "rate": 0.0
+      },
+      "advanced": {
+        "n": 120,
+        "detected": 3,
+        "rate": 0.025
+      },
+      "no_caries": {
+        "n": 60,
+        "detected": 0,
+        "rate": 0.0
+      }
+    }
+  },
+  "interpretation": "Both directions are deliberately harsh domain-shift tests. Low scores show that the RGB baseline's apparent performance is tied to its own acquisition protocol, not that the model implementation is wrong. This is the gap a second modality must be validated against."
+}

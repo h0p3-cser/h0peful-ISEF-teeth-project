@@ -1,0 +1,65 @@
+{
+  "model": "yolov8n.pt",
+  "epochs": 20,
+  "imgsz": 320,
+  "batch": 16,
+  "classes": {
+    "0": "caries"
+  },
+  "class_notes": {
+    "0": "caries (龋损，恒牙龋+乳牙龋合并为定位单类)"
+  },
+  "dataset": "Zenodo 14827784 Dataset.zip (6265 source images; 6249 after label quarantine; single-class localization)",
+  "label_counts": {
+    "train": {
+      "images": 4593,
+      "positive": 1581,
+      "background": 3012
+    },
+    "val": {
+      "images": 831,
+      "positive": 280,
+      "background": 551
+    },
+    "test": {
+      "images": 825,
+      "positive": 287,
+      "background": 538
+    }
+  },
+  "test_metrics": {
+    "mAP50": 0.9182512933611239,
+    "mAP50_95": 0.7208867164686399,
+    "precision": 0.842722774285482,
+    "recall": 0.8566223100457784,
+    "f1": 0.8496156975917609
+  },
+  "data_quality": {
+    "source_images": 6265,
+    "quarantined_images": 16,
+    "quarantined_boxes": 42,
+    "quarantine_breakdown": {
+      "train": {
+        "images": 14,
+        "boxes": 39
+      },
+      "val": {
+        "images": 0,
+        "boxes": 0
+      },
+      "test": {
+        "images": 2,
+        "boxes": 3
+      }
+    },
+    "reason": "source YOLO coordinates outside [0,1]; all boxes lie fully outside the image, so clipping is not geometrically valid",
+    "handling": "moved to data/public_rgb/full/_invalid_annotations and marked label_status=invalid_coords_quarantined in manifest.csv",
+    "effective_split_images": {
+      "train": 4593,
+      "val": 831,
+      "test": 825
+    },
+    "matched_ultralytics_behavior": true,
+    "report": "outputs/rgb_yolo_detection/label_quality_report.json"
+  }
+}

@@ -2,8 +2,8 @@
 
 ISEF 牙齿荧光（QLF）项目的代码仓库。
 
-目前的重点是 **目标 2：从 QLF 牙片的 RGB 里量化绿色荧光与红色荧光的强弱变化**。
-后续的数据处理脚本都放在 [`goal2-color-processing/`](goal2-color-processing/)。
+- [**stage1 / 终点一**](stage1/)：公开白光 RGB 口内图的龋坏牙检测、牙釉质龋分期和跨数据集评估。
+- [**目标 2**](goal2-color-processing/)：从 QLF 牙片的 RGB 通道量化绿色和红色荧光信号。
 
 ## 目录
 
@@ -11,6 +11,7 @@ ISEF 牙齿荧光（QLF）项目的代码仓库。
 .
 ├── README.md
 ├── requirements.txt
+├── stage1/                        终点一：公开 RGB 实验代码与复现说明
 └── goal2-color-processing/        目标 2：颜色通道拆分、量化与加权
     ├── README.md                  逐脚本说明 + 完整公式
     ├── 产物说明.md                 每个产物文件对 RGB 做了什么
@@ -21,6 +22,8 @@ ISEF 牙齿荧光（QLF）项目的代码仓库。
 ```
 
 ## 快速开始
+
+终点一的独立环境和复跑命令见 [stage1 / 终点一](stage1/README.md)。下面是目标 2 的运行方式。
 
 ```bash
 git clone https://github.com/h0p3-cser/h0peful-ISEF-teeth-project.git

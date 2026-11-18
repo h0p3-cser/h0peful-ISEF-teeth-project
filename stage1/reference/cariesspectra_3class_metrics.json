@@ -1,0 +1,64 @@
+{
+  "model": "resnet18 (ImageNet pretrained, frozen backbone + 3-class head)",
+  "classes": [
+    "early",
+    "advanced",
+    "no_caries"
+  ],
+  "class_zh": {
+    "early": "早期龋",
+    "advanced": "明显龋",
+    "no_caries": "正常"
+  },
+  "epochs": 15,
+  "eval_only": true,
+  "best_epoch": null,
+  "test_metrics": {
+    "accuracy": 0.8733,
+    "macro_f1": 0.8794,
+    "macro_sensitivity": 0.8833,
+    "macro_specificity": 0.9329,
+    "roc_auc_ovr_macro": 0.9692,
+    "per_class": {
+      "early": {
+        "precision": 0.8525,
+        "recall": 0.8667,
+        "f1": 0.8595,
+        "sensitivity": 0.8667,
+        "specificity": 0.9
+      },
+      "advanced": {
+        "precision": 0.887,
+        "recall": 0.85,
+        "f1": 0.8681,
+        "sensitivity": 0.85,
+        "specificity": 0.9278
+      },
+      "no_caries": {
+        "precision": 0.8889,
+        "recall": 0.9333,
+        "f1": 0.9106,
+        "sensitivity": 0.9333,
+        "specificity": 0.9708
+      }
+    },
+    "confusion_matrix": [
+      [
+        104,
+        11,
+        5
+      ],
+      [
+        16,
+        102,
+        2
+      ],
+      [
+        2,
+        2,
+        56
+      ]
+    ]
+  },
+  "history": []
+}
