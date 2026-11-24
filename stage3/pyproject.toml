@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qlf-stage3"
+version = "0.1.0"
+description = "Command-line entry points for QLF stage 3 processing"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "opencv-python-headless",
+    "Pillow",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+    "pypdf",
+]
+
+[project.scripts]
+qlf-stage3 = "qlf_stage3.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+qlf_stage3 = ["config/*.json", "config/*.csv"]
