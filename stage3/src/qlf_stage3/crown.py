@@ -5,12 +5,14 @@ from pathlib import Path
 
 from .dataset import (OUT, SEM, cv2, homogeneous, np, packed,
                          registered, save_mask)
+from .settings import LOCAL_VIEWS, PROJECT
 
 MARGIN_PX = 12
 
 
 def geometry():
-    return {tuple(k.split("_")):v for k,v in json.loads((OUT/"crown_rois.json").read_text()).items()}
+    path = (PROJECT if LOCAL_VIEWS.is_file() else OUT) / "crown_rois.json"
+    return {tuple(k.split("_")):v for k,v in json.loads(path.read_text(encoding="utf-8")).items()}
 
 
 def roi_labels(labels, config, matrix):

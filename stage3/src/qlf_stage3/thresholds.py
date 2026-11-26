@@ -31,6 +31,8 @@ def choose_case(tooth, angle, groups, legacy, indexes_by_path, held, table, scra
     anchor_path = by_physical_path(anchor)
     eligible = [r for r in rows if r["state_id"] == "S2" and not r["is_duplicate"]
                 and table[r["path"]]["loss_status"] == "automatic_qc_pass"]
+    if not eligible:
+        raise ValueError(f"{tooth}/{angle}: no eligible S2 capture passed registration and signal QC")
     current = min(eligible, key=lambda r: (abs(int(r["repeat_rank"]) - 4), int(r["repeat_rank"])))
     record = table[current["path"]]
     if record["s0_image_path"] != anchor_path:
@@ -95,7 +97,7 @@ def overview(destination, rows, *, title="S0 → S2（72 小时） · 五档阈�
     for line in data:
         ax.plot(THRESHOLDS, line, color="#527581", alpha=.50, lw=1.2, marker="o", ms=3)
     ax.plot(THRESHOLDS, np.median(data, axis=0), color="#a44429", lw=2.8,
-            marker="o", label="10 张样本的中位数")
+            marker="o", label=f"{len(rows)} 张样本的中位数")
     ax.set(xlabel="相对荧光损失阈值（%）",
            ylabel="响应面积（占有效牙冠像素的百分比）", ylim=(0, 104), xticks=THRESHOLDS)
     ax.grid(axis="y", color="#e2e8eb")
@@ -124,6 +126,8 @@ def main():
 
     parser = ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=Path("outputs/thresholds"))
+    parser.add_argument("--view", nargs=2, action="append", metavar=("TOOTH", "ANGLE"),
+                        help="Select a view from this workspace. The default is the published ten-view panel.")
     args = parser.parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
     cv2.setNumThreads(1)
@@ -131,8 +135,11 @@ def main():
     legacy, index, held = indexes()
     table = {r["image_path"]:r for r in read_csv(FEATURE_DIR / FEATURE_FILE)}
     rows = []
+    samples = [tuple(view) for view in args.view] if args.view else SAMPLES
+    if len(set(samples)) != len(samples) or any((t, a, "QLF") not in groups for t, a in samples):
+        parser.error("Each requested view must be unique and present. Use --view TOOTH ANGLE for a subset.")
     with TemporaryDirectory(prefix="qlf-threshold-masks-") as tmp, ThreadPoolExecutor(max_workers=4) as pool:
-        cases = pool.map(lambda pair: choose_case(*pair, groups, legacy, index, held, table, Path(tmp)), SAMPLES)
+        cases = pool.map(lambda pair: choose_case(*pair, groups, legacy, index, held, table, Path(tmp)), samples)
         for stats, (base, current), loss, fractions in cases:
             title = f'{stats["sample"]}  |  S0 → S2 (72 h)  |  Valid crown: {stats["valid_pixels"]:,} px'
             render(args.output_dir / f'{stats["sample"]}.png', title, base, current, loss, THRESHOLDS, fractions)

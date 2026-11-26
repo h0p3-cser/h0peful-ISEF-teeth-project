@@ -1,0 +1,789 @@
+{
+  "version": "native-white-backing-bstar-v1",
+  "coordinates": "EXIF-oriented native pixels, rectangles [left,top,right,bottom), 8-bit sRGB",
+  "review": "All 127 full-field burst representatives were inspected in hash-shuffled order with opaque codes; both upper corners were compared for all 873 frames. No stage or prediction was displayed on the representative sheets. One region per separately identifiable material. The unprinted right end of a marked matte white backing is visible through its burst; the screen has no certified neutral target.",
+  "reason_zh": {
+    "external_white_backing": "黑台后方、上沿褐色衬面旁，绿色固定标记下的独立白色哑光底面；同一物面的右侧空白区，避开印刷、阴影和反光。",
+    "unresolved_upper_strip": "可见台后上沿或边缘，其本色或受光无法从原图区分；黑托盘及镜面亮线不取样。",
+    "dark_carrier_only": "画面为牙体、深色托盘和底板；亮色痕迹沿沟槽或支架反光，未见可辨认的哑光白／灰物面。"
+  },
+  "groups": {
+    "T010-A090-3fd8af8c70c4": {
+      "review_code": "E001",
+      "basis_id": "I3102",
+      "basis_sha256": "ec24cecfc774912370bb9f0f86d229896050e42b66d210186ec655d450f756d7",
+      "reason": "dark_carrier_only"
+    },
+    "T004-A045-ea3f82061686": {
+      "review_code": "E002",
+      "basis_id": "I2675",
+      "basis_sha256": "18ac39116dd515bbf4dde88bf2fb70cb4e131778ce258b5f9b3e82db98c03b6e",
+      "reason": "dark_carrier_only"
+    },
+    "T006-A135-5f4f7e94e7da": {
+      "review_code": "E003",
+      "basis_id": "I2829",
+      "basis_sha256": "bcf9010b21bcf41d09ce4693b57729bda908463be96ffdecd2211f987945f729",
+      "reason": "dark_carrier_only"
+    },
+    "T010-A000-693bcab56074": {
+      "review_code": "E004",
+      "basis_id": "I3088",
+      "basis_sha256": "9b9e2d4f094371fc2c97dbba5ad7a88a6ba0a750852611d29b2fac163033fe31",
+      "reason": "dark_carrier_only"
+    },
+    "T007-A045-8bc5ad8b058d": {
+      "review_code": "E005",
+      "basis_id": "I2885",
+      "basis_sha256": "0ae54927dcde249a66acb15e74ab92acd6ac728bfef714dc9e7edf0757a5d4ba",
+      "reason": "dark_carrier_only"
+    },
+    "T003-A180-96d8539d4867": {
+      "review_code": "E006",
+      "basis_id": "I1387",
+      "basis_sha256": "9fa7c1ded7c562d8402a479c4b05960aa804a564d3cb4af83e8684d301074591",
+      "reason": "dark_carrier_only"
+    },
+    "T002-A045-400999ac8be3": {
+      "review_code": "E007",
+      "basis_id": "I0375",
+      "basis_sha256": "5a50befade617a02d580f29ad58e24d05a39bebbd96bd88a79cb056a721e236c",
+      "reason": "unresolved_upper_strip"
+    },
+    "T004-A000-59d941df3ca8": {
+      "review_code": "E008",
+      "basis_id": "I0501",
+      "basis_sha256": "9dca112b610a26df29c19dffe609ae807e3747a698f489e592875f610a043253",
+      "reason": "unresolved_upper_strip"
+    },
+    "T007-A045-56d4898dfb2a": {
+      "review_code": "E009",
+      "basis_id": "I0655",
+      "basis_sha256": "a844da3c1a61d59f5db45ad2e569a6e398ebeef7c1a5c9a5d084e9fb77e5f5c1",
+      "reason": "unresolved_upper_strip"
+    },
+    "T006-A180-1ba41c1116e4": {
+      "review_code": "E010",
+      "basis_id": "I2836",
+      "basis_sha256": "754e9bf5f570ce2d721bb4ffbf462cb218853ceca1ff0de10ac7a297d2180478",
+      "reason": "dark_carrier_only"
+    },
+    "T002-A090-f3e9b6510373": {
+      "review_code": "E011",
+      "basis_id": "I2542",
+      "basis_sha256": "c8b44a14a2a13913a441885c6cc6f487cfc3ff5711812e62b81c1fc42e0e1957",
+      "reason": "dark_carrier_only"
+    },
+    "T007-A135-b238d831935e": {
+      "review_code": "E012",
+      "basis_id": "I2899",
+      "basis_sha256": "d42516120a3da93b6a2eb3fb15607beb27567f692a828fb13a6412ae9b386062",
+      "reason": "dark_carrier_only"
+    },
+    "T009-A000-b728134d17a4": {
+      "review_code": "E013",
+      "basis_id": "I3018",
+      "basis_sha256": "75d369a28ca07894364c5ec1fadf9a21de6916c01a029bd62140e80616ee87a2",
+      "reason": "dark_carrier_only"
+    },
+    "T004-A135-2e9fbb53d338": {
+      "review_code": "E014",
+      "basis_id": "I1443",
+      "basis_sha256": "ab049176449e189c668507dfe5a23b2e398741b0c8f12a4f7a62f34c21badfc1",
+      "reason": "dark_carrier_only"
+    },
+    "T003-A045-aff4ee841a63": {
+      "review_code": "E015",
+      "basis_id": "I2605",
+      "basis_sha256": "86a24473b0e4ec646fc2cb07869eccc9b03761bcd3208b71e0539dad103198e4",
+      "reason": "dark_carrier_only"
+    },
+    "T010-A135-453ca5311d42": {
+      "review_code": "E016",
+      "basis_id": "I0886",
+      "basis_sha256": "6d47ee644db34907aef539542443257d203f1811633d1ad78fb51b78cf40b0f2",
+      "reason": "unresolved_upper_strip"
+    },
+    "T007-A000-251ff8075f5e": {
+      "review_code": "E017",
+      "basis_id": "I0641",
+      "basis_sha256": "6936eaa291afbdf1adff79c3357b24e9e9ef340d4724e3aa2ea18d3ead1d214b",
+      "reason": "unresolved_upper_strip"
+    },
+    "T006-A180-920300feba85": {
+      "review_code": "E018",
+      "basis_id": "I1597",
+      "basis_sha256": "1c081c94a46aa2e593724a52b3ddc8e1ee85fad6d8df208b52c61a31e1f04576",
+      "reason": "dark_carrier_only"
+    },
+    "T005-A045-4f3b70852656": {
+      "review_code": "E019",
+      "basis_id": "I0445",
+      "basis_sha256": "facf08357d27cf349589fd14c2e2bfae5bb58b0b80f31f438540136e1e0dbaef",
+      "reason": "unresolved_upper_strip"
+    },
+    "T002-A090-5f77ce1fce9c": {
+      "review_code": "E020",
+      "basis_id": "I0389",
+      "basis_sha256": "f1b819f612f9f3e9ac41cb41b42b9f9a91f321e64c8cde80ac45009313ba9a27",
+      "reason": "unresolved_upper_strip"
+    },
+    "T010-A000-25c892b4b34f": {
+      "review_code": "E021",
+      "basis_id": "I0851",
+      "basis_sha256": "fa11eb1976a4578bbda7926317d4453692baa4395359381d8cdfb6bdf4a26bcb",
+      "reason": "unresolved_upper_strip"
+    },
+    "T004-A045-d5f8b6c904b3": {
+      "review_code": "E022",
+      "basis_id": "I1415",
+      "basis_sha256": "f39dd1143df4f76d1c3833bd6e37faaf273e8f59a28dbe99eece326379487f11",
+      "reason": "dark_carrier_only"
+    },
+    "T002-A135-39319abded1c": {
+      "review_code": "E023",
+      "basis_id": "I0403",
+      "basis_sha256": "9731a60d6b538eabf815db1389466dd9afa3f04e3ecf1cb723531585a846e57e",
+      "reason": "unresolved_upper_strip"
+    },
+    "T005-A180-833c4a436e70": {
+      "review_code": "E024",
+      "basis_id": "I2766",
+      "basis_sha256": "ef3cca876e63c9209deda52dfef46b8f8513e26b7fca661af42e4c7b51922e2a",
+      "reason": "dark_carrier_only"
+    },
+    "T010-A180-bf1c02093fc7": {
+      "review_code": "E025",
+      "basis_id": "I0900",
+      "basis_sha256": "6f9ec4aa871db9e2461e806486f451e2c67bcddc41a12485a1b62d69dfc5960b",
+      "reason": "unresolved_upper_strip"
+    },
+    "T009-A135-05a766f7b046": {
+      "review_code": "E026",
+      "basis_id": "I0823",
+      "basis_sha256": "e2664bb8d9a7b0b15d279d0b164d8ac10e02c6f760507231d727339b13caa724",
+      "reason": "unresolved_upper_strip"
+    },
+    "T005-A045-e5c1da34e7c5": {
+      "review_code": "E027",
+      "basis_id": "I1485",
+      "basis_sha256": "21754010cda0c45fbae16c9c47a78bdf2e7cc233bbbea7c6ea8437225d42ce83",
+      "reason": "dark_carrier_only"
+    },
+    "T008-A045-cf805bb2699e": {
+      "review_code": "E028",
+      "basis_id": "I2955",
+      "basis_sha256": "4d556ce3ae0280567e1d5ac3e0edce221bd068b5363828af4728b1d4c8ab74c9",
+      "reason": "dark_carrier_only"
+    },
+    "T002-A000-ecfe49852eec": {
+      "review_code": "E029",
+      "basis_id": "I0361",
+      "basis_sha256": "2398dfe8d4073b4a506646d1a4d58323850bee84451c1b32907df293d4919ea8",
+      "reason": "unresolved_upper_strip"
+    },
+    "T005-A090-d2f5720b9ad3": {
+      "review_code": "E030",
+      "basis_id": "I2752",
+      "basis_sha256": "2d77a7ed55645ac997a7da3028cb669508395cee9a40ec8817d0423da62d0daa",
+      "reason": "dark_carrier_only"
+    },
+    "T010-A180-3d4d88c8e893": {
+      "review_code": "E031",
+      "basis_id": "I1877",
+      "basis_sha256": "52671358b4f075736e7a5fd562c1e4e7fe1fe3f19c2f421100ebfef1e106cbb6",
+      "reason": "dark_carrier_only"
+    },
+    "T002-A180-ab69e20022ba": {
+      "review_code": "E032",
+      "basis_id": "I1323",
+      "basis_sha256": "4a7116efe84a982aab215bcc0be8a09526b598764823b787fee0f74d5ff5e85e",
+      "reason": "dark_carrier_only"
+    },
+    "T009-A090-3ac2265416dd": {
+      "review_code": "E033",
+      "basis_id": "I0809",
+      "basis_sha256": "b5bfd4fa7f7663ff2ea3eb12da40aa49b6daf1e1a4be2fd7226526995e43002d",
+      "reason": "unresolved_upper_strip"
+    },
+    "T004-A135-ef3636a02d01": {
+      "review_code": "E034",
+      "basis_id": "I0543",
+      "basis_sha256": "8e5313bbcd01d5cff9453854a2c6b1d324d99e1206d3c2e46833b86f31ca6816",
+      "reason": "unresolved_upper_strip"
+    },
+    "T007-A090-fbf579ae9d79": {
+      "review_code": "E035",
+      "basis_id": "I0670",
+      "basis_sha256": "a750c1ef2a3e4b966aa08ebb0322c1aa1080172302fd15e9117c18101427098f",
+      "reason": "unresolved_upper_strip"
+    },
+    "T005-A135-36b05e532b14": {
+      "review_code": "E036",
+      "basis_id": "I0473",
+      "basis_sha256": "78908f5789c84f8f6d50dc1c7e606d0a7edb195dcbc69964440e29bb015a7341",
+      "reason": "unresolved_upper_strip"
+    },
+    "T003-A045-05b9fcafab5e": {
+      "review_code": "E037",
+      "basis_id": "I0305",
+      "basis_sha256": "84176f61d4745fb4eb4b9a5446e85a456057eb5e60380c8a4f30761545650d72",
+      "reason": "unresolved_upper_strip"
+    },
+    "T003-A000-6a5975f0a910": {
+      "review_code": "E038",
+      "basis_id": "I2598",
+      "basis_sha256": "68682c2ccab3a773dbb50abb9471cfa36e202d9aeeb6a8ff87f6fb54b4596cb4",
+      "reason": "dark_carrier_only"
+    },
+    "T002-A180-c6cad81796a7": {
+      "review_code": "E039",
+      "basis_id": "I2556",
+      "basis_sha256": "be885db9184b9c047db2bfb193cb7e9cd87ac4bb6746472b0f6a68a389de438a",
+      "reason": "dark_carrier_only"
+    },
+    "T005-A045-a7f77acc629b": {
+      "review_code": "E040",
+      "basis_id": "I2745",
+      "basis_sha256": "da89c258ba92eb6388b40f6034a0e9c6f4b99a1acf7a46eceacd7159098c9f50",
+      "reason": "dark_carrier_only"
+    },
+    "T005-A000-774a8362f671": {
+      "review_code": "E041",
+      "basis_id": "I1471",
+      "basis_sha256": "100a4b61a5d1b6c01007d5309581e612f7ddb3a7b63a1cc5e6af30cad485632c",
+      "reason": "dark_carrier_only"
+    },
+    "T006-A090-f142459be4e5": {
+      "review_code": "E042",
+      "basis_id": "I0599",
+      "basis_sha256": "2365dfe835bc3aca3a3f11e2fa5e92a210eb254426adc0c958ca788ac80b1f05",
+      "reason": "unresolved_upper_strip"
+    },
+    "T003-A000-5a292557b550": {
+      "review_code": "E043",
+      "basis_id": "I1337",
+      "basis_sha256": "915d32cdf18e355f28174f7d96dfe78b3a4dd7773b94c7d57c48fdcc925110fd",
+      "reason": "dark_carrier_only"
+    },
+    "T010-A090-4ee3c15f5a0a": {
+      "review_code": "E044",
+      "basis_id": "I1849",
+      "basis_sha256": "98220828bbfeef36debe5f64f1f8889bc3558e0ae83685d4ede87dc359d7c67c",
+      "reason": "dark_carrier_only"
+    },
+    "T008-A090-21ca5b323c5a": {
+      "review_code": "E045",
+      "basis_id": "I1709",
+      "basis_sha256": "0e213d8fee9e5c6c2de2e325d12c57952b01c405648335796924bea4d1532933",
+      "reason": "dark_carrier_only"
+    },
+    "T007-A180-61a0ec7f5102": {
+      "review_code": "E046",
+      "basis_id": "I1667",
+      "basis_sha256": "8d6b4724b2ea2244172851dda8fcff28aed0f0bbc78809001ffd2ccc3819094b",
+      "reason": "dark_carrier_only"
+    },
+    "T004-A180-18f27a5cfe0b": {
+      "review_code": "E047",
+      "basis_id": "I2696",
+      "basis_sha256": "b6d866cfa2ecdad8d70a914964cc60b31bfae23605480441dd2c9a55bc8ed914",
+      "reason": "dark_carrier_only"
+    },
+    "T010-A090-03c120e8a069": {
+      "review_code": "E048",
+      "basis_id": "I1891",
+      "basis_sha256": "0d875ed54225946e3d5abe6463c153cf5e09410f27954c3a22c7c524c9dc5950",
+      "reason": "unresolved_upper_strip"
+    },
+    "T010-A045-7353332fbb85": {
+      "review_code": "E049",
+      "basis_id": "I3095",
+      "basis_sha256": "c8f98cfd50f3fad8a19d9590cbf08f9fff41bd52277d20c19ba3f7fc7ba3ce1d",
+      "reason": "dark_carrier_only"
+    },
+    "T010-A045-408e7c8250ce": {
+      "review_code": "E050",
+      "basis_id": "I0865",
+      "basis_sha256": "f180be9d5dd596f954aedc817ccd3c4cfde2e2af0dcadcbd76a3fde0d1d27b50",
+      "reason": "unresolved_upper_strip"
+    },
+    "T006-A180-58acede4c01e": {
+      "review_code": "E051",
+      "basis_id": "I0627",
+      "basis_sha256": "6244ca07f4811611f1cee62af0e7a68c04b7c6b018cec4d5ea31891ce02f2838",
+      "reason": "unresolved_upper_strip"
+    },
+    "T006-A045-fe6bb31e271e": {
+      "review_code": "E052",
+      "basis_id": "I0585",
+      "basis_sha256": "2d0f1d29b6deaceb007004aa55a2c66c6cb9085566b9d04d92085c09e96812a4",
+      "reason": "unresolved_upper_strip"
+    },
+    "T005-A000-c2f6a3d37970": {
+      "review_code": "E053",
+      "basis_id": "I0431",
+      "basis_sha256": "df265e8f0cbfbfe7ee926bb46ba0327a53e3923928eed49b4066a0aae242cd57",
+      "reason": "unresolved_upper_strip"
+    },
+    "T007-A180-a0ff2a0c1c20": {
+      "review_code": "E054",
+      "basis_id": "I2906",
+      "basis_sha256": "2a8fb803d56d3fb2ce909654f0339c0a76ed449832fc69592b844cbb0eb5f944",
+      "reason": "dark_carrier_only"
+    },
+    "T009-A000-cec77ada5a12": {
+      "review_code": "E055",
+      "basis_id": "I1751",
+      "basis_sha256": "49351e84e88be56d9e25428e44123c81817e22e8653c12a228bc0ae1ccdd4862",
+      "reason": "dark_carrier_only"
+    },
+    "T007-A000-2644b60665de": {
+      "review_code": "E056",
+      "basis_id": "I2878",
+      "basis_sha256": "c283aeeb3b48104a6c49466ebb24cf9e27dbb0df52d0383c87cc4bf90550295f",
+      "reason": "dark_carrier_only"
+    },
+    "T005-A090-7a0c222ac4a1": {
+      "review_code": "E057",
+      "basis_id": "I0459",
+      "basis_sha256": "abbef3ee1ba4b2c3da3be6b9e33b215f7f8644ec4f1d7ae8b80b3964a51ce6f9",
+      "reason": "unresolved_upper_strip"
+    },
+    "T008-A180-b81e09656815": {
+      "review_code": "E058",
+      "basis_id": "I1737",
+      "basis_sha256": "1a26b36b723b95b33346c832f020593d589e0743fb9b91e5c00320f19c0fce68",
+      "reason": "dark_carrier_only"
+    },
+    "T008-A000-c45bb492e872": {
+      "review_code": "E059",
+      "basis_id": "I1681",
+      "basis_sha256": "47abc0c85c45ee0d8a934a36d14bc81dde8d8d127ce21bc6a471fe52efae6193",
+      "reason": "dark_carrier_only"
+    },
+    "T008-A045-397f9e21e831": {
+      "review_code": "E060",
+      "basis_id": "I1695",
+      "basis_sha256": "2ed4338f1b666423d540c343c8076a2699d518f1ec73b1cfdd612e1a4064f93e",
+      "reason": "dark_carrier_only"
+    },
+    "T007-A045-3d2af764651f": {
+      "review_code": "E061",
+      "basis_id": "I1625",
+      "basis_sha256": "2d1b8499935256da47d27f8c5a11d3e52b885221f483001529fd2e85c29432dc",
+      "reason": "dark_carrier_only"
+    },
+    "T005-A000-c892898c321f": {
+      "review_code": "E062",
+      "basis_id": "I2738",
+      "basis_sha256": "20bf66b07058f4bf7ed3ce1aae1cfa0f761d748ea895218a63353cebbf466ec8",
+      "reason": "dark_carrier_only"
+    },
+    "T006-A090-cbfa945b5202": {
+      "review_code": "E063",
+      "basis_id": "I2822",
+      "basis_sha256": "41ddf77c566a3c0ece300c6229d30e40572e76fa2ea956b9e90779300b795a70",
+      "reason": "dark_carrier_only"
+    },
+    "T009-A180-562471b6fce0": {
+      "review_code": "E064",
+      "basis_id": "I3046",
+      "basis_sha256": "9b8dce4e71d65fd4d442a4e5d37e8e59d3e17066eb1ebb57e34f24295befe818",
+      "reason": "dark_carrier_only"
+    },
+    "T002-A135-b05ab863f655": {
+      "review_code": "E065",
+      "basis_id": "I1309",
+      "basis_sha256": "8ca676a9bf7189794d6e4377eed56fe21e2d06e83f368fe2898dd6a8c8fbd159",
+      "reason": "dark_carrier_only"
+    },
+    "T003-A090-03d32faffe86": {
+      "review_code": "E066",
+      "basis_id": "I0320",
+      "basis_sha256": "f6dd012516541a506785baae232b109708d4c671255c4790124d2037585a8c67",
+      "reason": "unresolved_upper_strip"
+    },
+    "T009-A090-95b4e14e3f52": {
+      "review_code": "E067",
+      "basis_id": "I3032",
+      "basis_sha256": "ae6ca3492c77a5362ebb4a5c46e830525b4bca363ec8d3b78cb77bbda8edb5f2",
+      "reason": "dark_carrier_only"
+    },
+    "T004-A180-c8b993d64ea1": {
+      "review_code": "E068",
+      "basis_id": "I1457",
+      "basis_sha256": "610bc50745d24a1c2ac866c57bb6fa3ce8950c8b001271a81c0aa8fa5ef4e582",
+      "reason": "dark_carrier_only"
+    },
+    "T009-A045-07a18443d10e": {
+      "review_code": "E069",
+      "basis_id": "I3025",
+      "basis_sha256": "ead9de29ae6f814d3db536820eb5fbe8ceb2362be252a0e5b21253c04fa5e268",
+      "reason": "dark_carrier_only"
+    },
+    "T009-A090-543c577d6bda": {
+      "review_code": "E070",
+      "basis_id": "I1779",
+      "basis_sha256": "d3eb261f17c7a6a5578d73499be63e2b1891fd5b3354bc45dbb92f9e84f22b8e",
+      "reason": "dark_carrier_only"
+    },
+    "T005-A180-076410dc9f3a": {
+      "review_code": "E071",
+      "basis_id": "I0487",
+      "basis_sha256": "c54d6f3567e68246231354dd9c0f2c585baa677e0087f22ef91e6f5eadc95484",
+      "reason": "unresolved_upper_strip"
+    },
+    "T006-A000-43dbecf48da3": {
+      "review_code": "E072",
+      "basis_id": "I1541",
+      "basis_sha256": "dada79af5bd2290e28a40679a90c630a3f3965b03ce3bc45134fb41e19fccdd9",
+      "reason": "dark_carrier_only"
+    },
+    "T004-A180-2239cdb20cf3": {
+      "review_code": "E073",
+      "basis_id": "I0557",
+      "basis_sha256": "0304c7c4327b00ea5af64a78f3d0b7ec6a068c370d94d6144cac35b143fe6d1f",
+      "reason": "unresolved_upper_strip"
+    },
+    "T008-A180-f2b53c932d51": {
+      "review_code": "E074",
+      "basis_id": "I2976",
+      "basis_sha256": "1b8475afdb98b37af4a020e7ba64852150d0ea220fb4195698a712e88f350a21",
+      "reason": "dark_carrier_only"
+    },
+    "T003-A090-0cd6d0851031": {
+      "review_code": "E075",
+      "basis_id": "I2612",
+      "basis_sha256": "f758a37e764dc19d7bf87565ac71d89bc1a1f234e55261f33dc85c9cbc0222bf",
+      "reason": "dark_carrier_only"
+    },
+    "T004-A135-a45be146b5ce": {
+      "review_code": "E076",
+      "basis_id": "I2689",
+      "basis_sha256": "575ad6f1bea7b808b4b9a46e9ab2cf6a759f7d1508f66224fbf34680be6ed742",
+      "reason": "dark_carrier_only"
+    },
+    "T008-A135-087d58cf4370": {
+      "review_code": "E077",
+      "basis_id": "I0753",
+      "basis_sha256": "f2a3a3b9c71a90ece8476151bec6dac5a79cb2c27c7393c28cd53af129fb8f3c",
+      "reason": "unresolved_upper_strip"
+    },
+    "T002-A135-7b3a801d8ef5": {
+      "review_code": "E078",
+      "basis_id": "I2549",
+      "basis_sha256": "48f90bc9aa6d5730ad4f7cc7e32f1564da08570f2a1f8367e24b17334e703b9d",
+      "reason": "dark_carrier_only"
+    },
+    "T010-A135-66b2a8216d67": {
+      "review_code": "E079",
+      "basis_id": "I3109",
+      "basis_sha256": "e04b762ca69429dd4dd490e9a56f8c432f94003d98a121a5a90e7c8302066573",
+      "reason": "dark_carrier_only"
+    },
+    "T003-A000-118d6ad9d087": {
+      "review_code": "E080",
+      "basis_id": "I0291",
+      "basis_sha256": "97b9d960e024da052c862c98da1e72df4a48fb618938861848ff173b2d0306d3",
+      "reason": "unresolved_upper_strip"
+    },
+    "T006-A045-564a2e801954": {
+      "review_code": "E081",
+      "basis_id": "I1555",
+      "basis_sha256": "8219771fbc2f937953782230d909070ab89003cd5f8c5b2fd5c3b8197f4e90bf",
+      "reason": "dark_carrier_only"
+    },
+    "T009-A180-f0017dfda70d": {
+      "review_code": "E082",
+      "basis_id": "I0837",
+      "basis_sha256": "0f98adec48072a03950cd7ab9b182c40a514b470d3dc7994874735709eb8692e",
+      "reason": "unresolved_upper_strip"
+    },
+    "T007-A135-f83c4764fe86": {
+      "review_code": "E083",
+      "basis_id": "I0685",
+      "basis_sha256": "d756b0f5ed83ee1606079202251f796c51de239d1b6e5dc159e2fce159cdc298",
+      "reason": "unresolved_upper_strip"
+    },
+    "T003-A090-f29669730986": {
+      "review_code": "E084",
+      "basis_id": "I0316",
+      "basis_sha256": "2f22aeeccf5bfce89f2f5c6b4aafcf874eb65a40ef1b72c7f1dfddd4783b00db",
+      "reason": "unresolved_upper_strip"
+    },
+    "T002-A000-bef573e9a158": {
+      "review_code": "E085",
+      "basis_id": "I2528",
+      "basis_sha256": "fb6d2b8d8b59a237a0cce2daa0c298a2018c15f1752ecdb6647a81810a5b969b",
+      "reason": "dark_carrier_only"
+    },
+    "T010-A045-abbf430a25ef": {
+      "review_code": "E086",
+      "basis_id": "I1835",
+      "basis_sha256": "8d1f60c9cba8f7a5ed97465fb7e052792c3db87ab9c19cdcd95e4dd44704acaf",
+      "reason": "dark_carrier_only"
+    },
+    "T002-A045-d9ca7d3df16c": {
+      "review_code": "E087",
+      "basis_id": "I1281",
+      "basis_sha256": "b660ea6f0898b23ca5a8e3fd109ca75d4c23e255d39c84e1ef9706a38e5416a3",
+      "reason": "dark_carrier_only"
+    },
+    "T007-A180-0de1ab3d348a": {
+      "review_code": "E088",
+      "basis_id": "I0697",
+      "basis_sha256": "671406b430c24f3dfbaac13732067c5e0960e91aea30c437c1733048feb8e159",
+      "reason": "unresolved_upper_strip"
+    },
+    "T005-A135-49bb9451b8e8": {
+      "review_code": "E089",
+      "basis_id": "I1513",
+      "basis_sha256": "48ab0430045430232a4c72b61111e1915895e7588d52d342eb352861d1a75442",
+      "reason": "dark_carrier_only"
+    },
+    "T006-A090-6b357621a498": {
+      "review_code": "E090",
+      "basis_id": "I1569",
+      "basis_sha256": "1106a7a3c104f715e99c65a0db8498632a9cbeda56e6567534c1f6f4fcb4d881",
+      "reason": "dark_carrier_only"
+    },
+    "T009-A135-20a5feadb5c5": {
+      "review_code": "E091",
+      "basis_id": "I3039",
+      "basis_sha256": "c247c79277a1c495c4d5d65ac4177e87c0995bec1324ff148d2e4d5b36dec25b",
+      "reason": "dark_carrier_only"
+    },
+    "T006-A000-5a520cf656c2": {
+      "review_code": "E092",
+      "basis_id": "I2808",
+      "basis_sha256": "5acfaa7088244155e59d5367e56a95124d0288077e6cd2f383765e1196f610c5",
+      "reason": "dark_carrier_only"
+    },
+    "T010-A180-0df7f269486e": {
+      "review_code": "E093",
+      "basis_id": "I3116",
+      "basis_sha256": "ca6b238eae7f3274aa2fba4947485fbddf5f0bebd809614fffb3ddb5dce4634f",
+      "reason": "dark_carrier_only"
+    },
+    "T004-A000-2e9305866bf5": {
+      "review_code": "E094",
+      "basis_id": "I2669",
+      "basis_sha256": "4713bc90882827ae9666eb2388ec82b9f25aa9d179e80cc678b10ee6ada0b9b1",
+      "reason": "dark_carrier_only"
+    },
+    "T007-A000-c453b58c81b4": {
+      "review_code": "E095",
+      "basis_id": "I1611",
+      "basis_sha256": "1634fc461571c7bc03e5aa123927aa4612d2fa7ba185d75c932bbd38c046891f",
+      "reason": "dark_carrier_only"
+    },
+    "T010-A135-8c204e00a163": {
+      "review_code": "E096",
+      "basis_id": "I1863",
+      "basis_sha256": "8b1c5d453e8d45338aaa8861782a6d89e5d12be0c3ec0ab95c6ed84ba1ee957a",
+      "reason": "dark_carrier_only"
+    },
+    "T008-A090-eacb6690c95c": {
+      "review_code": "E097",
+      "basis_id": "I2962",
+      "basis_sha256": "7b86514870132680b2ffc52aee6bf03aa5b98e625f306cd9d29da7ac7f43d48a",
+      "reason": "dark_carrier_only"
+    },
+    "T008-A135-10007dee4b5f": {
+      "review_code": "E098",
+      "basis_id": "I1723",
+      "basis_sha256": "48e32fb176fc8e10ccbbd12a538e5b700886bc3ec1a0b29ac374a3389ec05d87",
+      "reason": "dark_carrier_only"
+    },
+    "T009-A135-168c81b53842": {
+      "review_code": "E099",
+      "basis_id": "I1793",
+      "basis_sha256": "f3c8d347ce45390d6668665678cc2025685c4f342645ee985a4c98525dba20e9",
+      "reason": "dark_carrier_only"
+    },
+    "T002-A000-75330e03e5eb": {
+      "review_code": "E100",
+      "basis_id": "I1267",
+      "basis_sha256": "9ca111f3790eadb8a91ab1ad8b6ed046e27e028954ace0e09a2bf2df4b4ee085",
+      "reason": "dark_carrier_only"
+    },
+    "T004-A000-a8b8c46ccba0": {
+      "review_code": "E101",
+      "basis_id": "I1401",
+      "basis_sha256": "037edf490eee92b59ab4182ed7c85aaecbe6fb5d28fff4e2e07af99ee2b10a11",
+      "reason": "dark_carrier_only"
+    },
+    "T004-A045-ac844f96dd45": {
+      "review_code": "E102",
+      "basis_id": "I0515",
+      "basis_sha256": "7bf1a03307d365ba08dbcedd26a6b8e0824f0c8ecea867324a95b7fc53e5af13",
+      "reason": "unresolved_upper_strip"
+    },
+    "T007-A135-9ade79dac8a2": {
+      "review_code": "E103",
+      "basis_id": "I1653",
+      "basis_sha256": "228e5b0875325834041e6773734590dcd4c1043b01052c14ae8e4b02b0b7d08d",
+      "reason": "dark_carrier_only"
+    },
+    "T002-A090-c7167471e948": {
+      "review_code": "E104",
+      "basis_id": "I1295",
+      "basis_sha256": "327e02d87ac18a15db2830607f9bbab1f02bc65452e76812a29fbedeea5f0038",
+      "reason": "dark_carrier_only"
+    },
+    "T006-A135-3d3433a2558e": {
+      "review_code": "E105",
+      "basis_id": "I1583",
+      "basis_sha256": "b5056cec990ebc32fb42a99a827ce216372e7a2e74ed8436fa5524a6731cc9f1",
+      "reason": "dark_carrier_only"
+    },
+    "T002-A180-be9127ba4415": {
+      "review_code": "E106",
+      "basis_id": "I0417",
+      "basis_sha256": "4e2f3b059f57dc11552dbd2452290b4e589152b81a8c155a43f61c5868f711a2",
+      "reason": "unresolved_upper_strip"
+    },
+    "T008-A045-54fd94733ab6": {
+      "review_code": "E107",
+      "basis_id": "I0725",
+      "basis_sha256": "b8b409db9b1ed2282004b641a0fb846df2f6f21d6a4cc0d0282d1d9ce1ba0acc",
+      "reason": "unresolved_upper_strip"
+    },
+    "T003-A045-a3bc7c1fdddd": {
+      "review_code": "E108",
+      "basis_id": "I1351",
+      "basis_sha256": "add68a4d9e9485e71d735a596eaa86748b956df1678863ddef425add0787d0d4",
+      "reason": "dark_carrier_only"
+    },
+    "T009-A180-c78f507e4882": {
+      "review_code": "E109",
+      "basis_id": "I1807",
+      "basis_sha256": "91e7c01c5870088d3f45c8fa46b5b27cb40fb312c0ee08a4af2fc31afad40422",
+      "reason": "dark_carrier_only"
+    },
+    "T008-A000-28bf0c5f4dfb": {
+      "review_code": "E110",
+      "basis_id": "I0711",
+      "basis_sha256": "6f3380a709857e286f36b0339b67f0f7cbb8eec9be9bded248dc29f592dc59b4",
+      "reason": "external_white_backing",
+      "native_size": [
+        2688,
+        1520
+      ],
+      "regions": [
+        {
+          "material": "unprinted_right_white_backing",
+          "box": [
+            2655,
+            55,
+            2681,
+            79
+          ]
+        }
+      ]
+    },
+    "T006-A000-267ccb3754fb": {
+      "review_code": "E111",
+      "basis_id": "I0571",
+      "basis_sha256": "b36d1c2c96128d0bc4b0b08762f5f63ab93ef170fa4ac9a939ae0048bb9b04d3",
+      "reason": "unresolved_upper_strip"
+    },
+    "T009-A045-92f23d1924a5": {
+      "review_code": "E112",
+      "basis_id": "I0795",
+      "basis_sha256": "ce48cca21bb5d4854621b714a2fe8ec9e0b3b12dfad375b68e4ead4efec876d9",
+      "reason": "unresolved_upper_strip"
+    },
+    "T006-A135-6a1e87f82861": {
+      "review_code": "E113",
+      "basis_id": "I0613",
+      "basis_sha256": "239d356ba48e77ebd534d3a120e862ccea05dbad79070600c0ae251838badafc",
+      "reason": "unresolved_upper_strip"
+    },
+    "T003-A180-e47deb994cd3": {
+      "review_code": "E114",
+      "basis_id": "I2626",
+      "basis_sha256": "20a826a765051b51ecba192b430c9c5d5de26e815058782325107086eee02b4f",
+      "reason": "dark_carrier_only"
+    },
+    "T008-A180-cacfa476bf64": {
+      "review_code": "E115",
+      "basis_id": "I0767",
+      "basis_sha256": "87d541b9ba180c1c5e8dddc016e29548b71aeba06d1a7afc0dc5c9d0112caa46",
+      "reason": "unresolved_upper_strip"
+    },
+    "T003-A090-04defef1da7d": {
+      "review_code": "E116",
+      "basis_id": "I1358",
+      "basis_sha256": "99e52b61374e6ce1ed644a857a94b6b18bfb3d8ff837393d8c3ba84ceee41c9a",
+      "reason": "dark_carrier_only"
+    },
+    "T008-A090-f80ea446507a": {
+      "review_code": "E117",
+      "basis_id": "I0739",
+      "basis_sha256": "42c274eefc18aca1610400fbeb60e6e04e26930ad81abe779f3a3c6b417b8b38",
+      "reason": "unresolved_upper_strip"
+    },
+    "T009-A045-15407fd9843f": {
+      "review_code": "E118",
+      "basis_id": "I1765",
+      "basis_sha256": "85d1b4217900c5e791eb79dcd72dcc8226457ab4076d4c937303fe61fc64e632",
+      "reason": "dark_carrier_only"
+    },
+    "T005-A135-2346ae38afe1": {
+      "review_code": "E119",
+      "basis_id": "I2759",
+      "basis_sha256": "3783569191bae1aca723de8912bd1cc58422688c01e31402d21501aa206f70b8",
+      "reason": "dark_carrier_only"
+    },
+    "T002-A045-a8ec0c3cc749": {
+      "review_code": "E120",
+      "basis_id": "I2535",
+      "basis_sha256": "d37ec156bb2cdabf039e4475785abafa25d282e7e23cb48df639065ecc3cf606",
+      "reason": "dark_carrier_only"
+    },
+    "T009-A000-fe2a9a8c9358": {
+      "review_code": "E121",
+      "basis_id": "I0781",
+      "basis_sha256": "469f3589bf6b75fac5e9fe39306fbd195974d4935ba836eb1ac9428f1bf62dc0",
+      "reason": "unresolved_upper_strip"
+    },
+    "T005-A090-7849915be410": {
+      "review_code": "E122",
+      "basis_id": "I1499",
+      "basis_sha256": "be4810b7a11773c6d7bcc9d3d8732cad27effcea9561b5ffe9aaeaa5a73a2db4",
+      "reason": "dark_carrier_only"
+    },
+    "T005-A180-b509f72740bb": {
+      "review_code": "E123",
+      "basis_id": "I1527",
+      "basis_sha256": "801213d119512e46a25b442041a26765bebcdb6305a4783803b7a92ca0629da0",
+      "reason": "dark_carrier_only"
+    },
+    "T008-A135-e4bfc7d3f183": {
+      "review_code": "E124",
+      "basis_id": "I2969",
+      "basis_sha256": "2f1dc5bd6992304adb5e9a2a090b0b50f30d49fa9fedf5f7c1b287907cbad5e4",
+      "reason": "dark_carrier_only"
+    },
+    "T006-A045-c83f9ec8ed88": {
+      "review_code": "E125",
+      "basis_id": "I2815",
+      "basis_sha256": "8bd9787e03ebad9364e90245275a01d82825c0746058f4706c1521b8984f5d7c",
+      "reason": "dark_carrier_only"
+    },
+    "T008-A000-4ece4264719c": {
+      "review_code": "E126",
+      "basis_id": "I2948",
+      "basis_sha256": "88e95d02cd479b39a95b031782f3d474a0cd5cc48f9e57c8d28761f0e52b5aa8",
+      "reason": "dark_carrier_only"
+    },
+    "T003-A180-df76fbbbd2ca": {
+      "review_code": "E127",
+      "basis_id": "I0347",
+      "basis_sha256": "f336017e66eb7e0bdf0ad0f26316a4da270bf113a0a250c3e64cb60e59900c7a",
+      "reason": "unresolved_upper_strip"
+    }
+  }
+}

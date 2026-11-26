@@ -13,7 +13,8 @@ import cv2
 import numpy as np
 
 OUT = Path(__file__).resolve().parent / "config"
-from .settings import PROJECT
+from .settings import LOCAL_VIEWS, PROJECT
+from .image_io import read_image, write_png
 DATA = PROJECT / "Data"
 GEN2 = "03_较重度脱矿_2代"
 SEM = DATA / "数据处理代码" / "语义掩膜_背景与基线黑斑"
@@ -57,6 +58,26 @@ def data_path(row):
 
 def inventory():
     rows = read_csv(DATA / "manifest.csv")
+    if LOCAL_VIEWS.is_file():
+        layout = json.loads(LOCAL_VIEWS.read_text(encoding="utf-8"))
+        if layout["schema"] not in ("teeth_student.stage3.v1", "qlf_stage3.views.v1"):
+            raise ValueError(f"Unsupported layout in {LOCAL_VIEWS}")
+        groups = defaultdict(list)
+        for row in rows:
+            row["path"] = row["file_path"]
+            row["is_duplicate"] = row["is_duplicate"] == "1"
+            if row["state_id"] == "S2" and row["batch_id"] != "C04":
+                raise ValueError(f"Expected S2 C04: {row['path']}")
+            groups[row["tooth_id"], row["angle_id"], row["modality"]].append(row)
+        expected = {(t, a, m) for t, a in layout["views"] for m in ("QLF", "RGB")}
+        repeats = layout.get("repeats_per_view", 7)
+        slots = Counter((s, str(i)) for s in STATES for i in range(1, repeats + 1))
+        if not expected or set(groups) != expected or any(
+            Counter((r["state_id"], r["repeat_rank"]) for r in group) != slots
+            for group in groups.values()
+        ):
+            raise ValueError("Each selected view needs its declared repeated RGB/QLF pairs in each stage")
+        return groups
     source = {f'{GEN2}/{r["file"]}': r for r in read_csv(DATA / GEN2 / "_整理清单.csv")}
     groups = defaultdict(list)
     for r in rows:
@@ -92,15 +113,12 @@ def get_anchor(rows, legacy):
 
 def read_rgb(row):
     path = DATA / row.get("physical_path", row["path"])
-    img = cv2.imread(str(path), cv2.IMREAD_COLOR | cv2.IMREAD_IGNORE_ORIENTATION)
-    if img is None:
-        raise ValueError(f"Unreadable image {path}")
-    return img
+    return read_image(path, cv2.IMREAD_COLOR | cv2.IMREAD_IGNORE_ORIENTATION)
 
 
 def read_label(path):
-    label = cv2.imread(str(path), cv2.IMREAD_GRAYSCALE)
-    if label is None or not label.any():
+    label = read_image(path, cv2.IMREAD_GRAYSCALE)
+    if not label.any():
         raise ValueError(f"Unreadable/empty label {path}")
     return label
 
@@ -136,6 +154,5 @@ def composition_passes(a, b, matrix):
 def save_mask(path, mask):
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_name(path.stem + ".tmp.png")
-    if not cv2.imwrite(str(temp), mask, [cv2.IMWRITE_PNG_COMPRESSION, 3]):
-        raise OSError(f"Cannot write {temp}")
+    write_png(temp, mask)
     temp.replace(path)

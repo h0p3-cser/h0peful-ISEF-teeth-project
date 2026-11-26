@@ -15,7 +15,7 @@ INK = "#14282e"
 
 
 def use_chinese_font():
-    for name in ("PingFang SC", "Noto Sans CJK SC", "Arial Unicode MS"):
+    for name in ("PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", "Arial Unicode MS"):
         try:
             font_manager.findfont(name, fallback_to_default=False)
         except ValueError:

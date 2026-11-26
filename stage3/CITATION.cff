@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Please cite this software and identify the dataset version used in your analysis."
+title: "QLF Stage 3: Paired fluorescence and original RGB or grayscale classification of experimental stage"
+type: software
+authors:
+  - name: "QLF Stage 3 contributors"
+version: "1.2.0"
+license: AGPL-3.0-only

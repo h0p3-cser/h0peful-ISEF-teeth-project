@@ -1,0 +1,30 @@
+{
+  "qlf_workflow": "endpoint3_gray_qlf255_thr30",
+  "states": [
+    "S0",
+    "S1",
+    "S2"
+  ],
+  "feature_columns": [
+    "huber_delta_f_pct",
+    "loss_area_gt30_pct",
+    "p10_intensity",
+    "G_texture_entropy"
+  ],
+  "weights": "ResNet18_Weights.IMAGENET1K_V1",
+  "weights_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+  "white_light_mode": "whole_frame_exif_gray8_bilinear_long224_center_black_v1",
+  "pca_components": 4,
+  "classifier": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 3000,
+    "tol": 0.0001,
+    "fit_intercept": true,
+    "class_weight": null
+  },
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 20261124,
+  "case_selection": "For each comparator and change direction: two-stage error first, then descending probability of the wrong class in the erroneous model, then ascending group_id.",
+  "representative_frame": "Minimum Euclidean distance to the group mean untransformed 512-D white-light vector, then ascending sample_id."
+}

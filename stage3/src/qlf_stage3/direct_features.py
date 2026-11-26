@@ -12,13 +12,14 @@ from .dataset import (DATA, OUT, PROJECT, SEM, STATES, cv2, get_anchor, inventor
                          read_csv, read_index, read_label, read_rgb, write_csv)
 from .crown import geometry, native_crown, publish_crown
 from .pixels import INTENSITY, LOSSES, direct_loss, intensity
+from .settings import LOCAL_VIEWS
 
 TAU = 5.0
 ERODE = np.ones((3,3),np.uint8)
 FEATURE_DIR = PROJECT / "QLF_GPTadvice"
 FEATURE_FILE = "QLF_GPTadvice_S0_S1_S2_C04.csv"
 # S0 folders were swapped after the user confirmed the identity correction.
-S0_SOURCE_IDS = {"T004": "T005", "T005": "T004"}
+S0_SOURCE_IDS = {} if LOCAL_VIEWS.is_file() else {"T004": "T005", "T005": "T004"}
 CORRECTED_LABELS = Path("编号复核后") / "标签"
 CORRECTED_CROWNS = Path("编号复核后") / "牙冠标签"
 
@@ -217,6 +218,9 @@ def group_records(rows, legacy, index, held, rgb_paths, crown_config, reviewed):
 
 
 def indexes():
+    if LOCAL_VIEWS.is_file():
+        index = read_index(SEM / "local-index.jsonl")
+        return index, index, set()
     legacy=read_index(SEM/"legacy_index.jsonl")
     active=read_index(SEM/"gen2_index.jsonl")
     review = SEM / "identity-hold.csv"
@@ -273,7 +277,8 @@ def main():
             qlf.extend(fr)
             adjacent.extend(ps)
     qlf.sort(key=lambda r:(r["state_id"],r["tooth_id"],r["angle_id"],int(r["repeat_rank"])))
-    assert len(qlf)==945 and len(adjacent)==315
+    if len(qlf) != 21 * len(sequence) or len(adjacent) != 7 * len(sequence):
+        raise ValueError("Incomplete per-view direct feature export")
     args.output_dir.mkdir(parents=True, exist_ok=True)
     write_csv(args.output_dir / FEATURE_FILE, qlf)
     write_csv(args.output_dir / "QLF_GPTadvice_S1_S2_C04_直接损失.csv",adjacent)

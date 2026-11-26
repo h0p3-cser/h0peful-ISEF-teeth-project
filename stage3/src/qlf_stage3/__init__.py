@@ -1,5 +1,5 @@
-"""QLF stage 3 processing package."""
+"""Endpoint 3: calibrated QLF and paired white-light classification."""
 
-__version__ = "0.1.0"
+__version__ = "1.2.0"
 
 __all__ = ["__version__"]

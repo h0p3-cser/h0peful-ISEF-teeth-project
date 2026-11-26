@@ -12,6 +12,7 @@ import importlib
 import os
 import sys
 from collections.abc import Sequence
+from . import __version__, workflow
 
 # Public command name -> module (relative to this package).
 COMMANDS = {
@@ -30,10 +31,12 @@ COMMANDS = {
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="qlf-stage3",
-        description="Run QLF stage 3 processing commands.",
+        description="Endpoint 3: calibrated QLF and paired white-light stage classification.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=(
-            "commands: "
-            + ", ".join(f"{name} -> {module}" for name, module in COMMANDS.items())
+            "Study commands\n" + "\n".join(f"  {name:14} {help_text}" for name, help_text in workflow.COMMANDS.items())
+            + "\n\nHistorical QLF commands\n  " + ", ".join(COMMANDS)
+            + "\n\nUse qlf-stage3 COMMAND --help for arguments."
         ),
     )
     parser.add_argument(
@@ -45,7 +48,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "command",
         metavar="COMMAND",
-        choices=COMMANDS,
+        choices=(*workflow.COMMANDS, *COMMANDS),
         help="processing command to run",
     )
     parser.add_argument(
@@ -54,6 +57,7 @@ def _build_parser() -> argparse.ArgumentParser:
         nargs=argparse.REMAINDER,
         help="arguments forwarded verbatim to the command",
     )
+    parser.add_argument("--version", action="version", version=__version__)
     return parser
 
 
@@ -61,6 +65,10 @@ def main(argv: Sequence[str] | None = None) -> object:
     """Parse the command line, then dispatch to the selected module's ``main``."""
     parser = _build_parser()
     args = parser.parse_args(argv)
+    if args.command in workflow.COMMANDS:
+        if args.data_root is not None:
+            parser.error("For the study workflow pass --data after the command; --data-root is for legacy QLF commands.")
+        return workflow.command(args.command, args.args)
 
     if args.data_root is not None:
         os.environ["QLF_DATA_ROOT"] = os.path.abspath(args.data_root)

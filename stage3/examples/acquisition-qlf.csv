@@ -1,0 +1,3 @@
+capture_id,huber_delta_f_pct,loss_area_gt30_pct,p10_intensity,G_texture_entropy
+example01,31.6,42.0,96,3.8
+example01,32.4,44.0,94,3.9

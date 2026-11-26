@@ -9,7 +9,7 @@ import numpy as np
 
 
 def atlas_font():
-    for family in ("Noto Sans CJK SC", "PingFang SC", "Arial Unicode MS"):
+    for family in ("Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", "Arial Unicode MS"):
         try:
             return FontProperties(fname=findfont(family, fallback_to_default=False))
         except ValueError:

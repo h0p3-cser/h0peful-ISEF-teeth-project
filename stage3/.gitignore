@@ -3,3 +3,14 @@
 /data/
 /dist/
 /build/
+/runs/
+/.venv/
+/wheelhouse/
+/.pytest_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.joblib
+*.pth
+.DS_Store
+Thumbs.db

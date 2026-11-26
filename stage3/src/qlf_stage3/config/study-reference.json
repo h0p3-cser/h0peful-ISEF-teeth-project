@@ -1,0 +1,20 @@
+{
+  "counts": {
+    "held_teeth": 9,
+    "paired_frames": 873,
+    "groups": 127,
+    "oof_group_rows": 381,
+    "oof_frame_rows": 2619,
+    "converged_heads": 27
+  },
+  "primary_macro_f1": {
+    "M1": 0.7038907594463151,
+    "M2": 0.7527244360577694,
+    "M3": 0.8587069309291531
+  },
+  "sha256": {
+    "training-features-255-thr30.csv": "db3d3a04bda1d37ea655c2e7c8d3cb08094729591fb0bc187eab09306d27efd5",
+    "oof_groups.csv": "d476ccd45aa261aea4bb8efcd6e9da06c2979939b9c1e635a0534288a272449f",
+    "oof_frames.csv": "8199621f20e87ae98bf641a633006a88270f48efbe6f96c5b4eb9f023229208c"
+  }
+}

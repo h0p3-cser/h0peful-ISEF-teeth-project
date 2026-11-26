@@ -16,6 +16,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 
 HERE = Path(__file__).resolve().parent
 from .build_masks import process_group
+from .settings import LOCAL_VIEWS
 from .dataset import DATA, cv2, get_anchor, inventory, np, read_csv, read_label, write_csv
 from .direct_features import (FEATURE_DIR, FEATURE_FILE, S0_SOURCE_IDS, confirmed_rows, frame_native,
                             in_reference, indexes, measure_pair, reference_crop)
@@ -192,7 +193,7 @@ def repeat_sheet(tooth, angle, tiles):
     return canvas
 
 
-def cover(keys, counts, labels):
+def cover(keys, counts):
     from .atlas_plots import FONT
 
     font = FONT
@@ -201,9 +202,12 @@ def cover(keys, counts, labels):
     fig.text(.069, .833, "同牙同角度以 S0 为基线  ·  S1 为 24 / 35 小时  ·  S2 为 72 小时",
              fontsize=15, fontproperties=font, color="#274a55")
     n1, n2 = (sum(row[i] > 0 for row in counts) for i in range(2))
+    teeth = sorted({tooth for tooth, _ in keys})
+    angles = sorted({angle for _, angle in keys})
+    labels = [f"{int(a[1:])}°" for a in angles]
     lines = [
-        "图册覆盖 9 颗牙和 5 个角度，每个牙号与角度占一页。",
-        f"通过质检的视图  S0→S1  {n1}/45    S0→S2  {n2}/45",
+        f"图册覆盖 {len(teeth)} 颗牙和 {len(angles)} 个角度，每个视图占一页。",
+        f"通过质检的视图  S0→S1  {n1}/{len(keys)}    S0→S2  {n2}/{len(keys)}",
         "表内数字依次为两次比较通过质检的非复制连拍张数。0 表示只展示照片。",
         "代表图优先选第 4 张或最接近第 4 张的合格连拍。",
     ]
@@ -211,10 +215,8 @@ def cover(keys, counts, labels):
         fig.text(.07, .775 - .041 * i, line, fontsize=12, fontproperties=font, color="#243943")
     ax = fig.add_axes([.11, .23, .76, .36])
     ax.axis("off")
-    teeth = sorted({tooth for tooth, _ in keys})
-    angles = sorted({angle for _, angle in keys})
     lookup = dict(zip(keys, counts, strict=True))
-    table_data = [[f"{lookup[tooth, angle][0]} / {lookup[tooth, angle][1]}"
+    table_data = [[f"{lookup[tooth, angle][0]} / {lookup[tooth, angle][1]}" if (tooth, angle) in lookup else "—"
                    for angle in angles] for tooth in teeth]
     grid = ax.table(cellText=table_data, rowLabels=teeth, colLabels=labels, cellLoc="center", bbox=[0, 0, 1, 1])
     grid.auto_set_font_size(False)
@@ -244,7 +246,7 @@ def main():
     legacy, index, held = indexes()
     table = {r["image_path"]: r for r in read_csv(FEATURE_DIR / FEATURE_FILE)}
     keys = sorted((t, a) for t, a, mode in groups if mode == "QLF")
-    if len(keys) != 45:
+    if not LOCAL_VIEWS.is_file() and len(keys) != 45:
         raise ValueError(f"Expected the 45 views in the current dataset, found {len(keys)}")
     panels_dir = destination / "views"
     panels_dir.mkdir(exist_ok=True)
@@ -279,7 +281,7 @@ def main():
 
         front_path = scratch / "cover.pdf"
         with PdfPages(front_path) as front:
-            fig = cover(keys, counts, [f"{angle}°" for angle in (0, 45, 90, 135, 180)])
+            fig = cover(keys, counts)
             front.savefig(fig)
             plt.close(fig)
         writer = PdfWriter()

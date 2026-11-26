@@ -1,0 +1,170 @@
+{
+  "version": "reviewed-full-field-scenes-1",
+  "native_case_review": {
+    "rgb_image_id": "I0654",
+    "raw_pixel_sha256": "3de0e7694d508cff0638b84fdd5812b8a1313302235b95878014bd9e49633545",
+    "material_pixel_sha256": "e526ed9eb3418dbdccc2d586ba0502e59f76d78e9062120ec87152cd1b997ef0",
+    "observation": "同尺度原位检查可见，全图校正后棕黑纹的走向及纹内明暗颗粒仍可分辨，周围牙面整体变暗，纹与牙面的亮度差也减小。旧牙根校正图的深色段明显偏蓝，部分纹内层次被裁切。"
+  },
+  "drawing_size": [2688, 1520],
+  "material_roles": {
+    "outer_bed": "fit",
+    "upper_substrate": "fit",
+    "notched_disc": "holdout"
+  },
+  "identities": {
+    "outer_bed": "Matte field of the outer dark bed, outside the round carrier. Specific polymer and absolute reflectance are unknown.",
+    "upper_substrate": "Exposed physical strip immediately behind the upper rim in the S0 event. Re-identified within the uninterrupted burst by the edge silhouette. All of its sectors, including the marked white section in T008, count as a single material.",
+    "notched_disc": "Face of the notched round sample carrier, identified by its outline and tab. Three interiors of its face are evaluated as one held-out physical material, never as three colours. Positions across events track material/sector, not homologous individual pixels."
+  },
+  "block_material": {
+    "bed": "outer_bed",
+    "rim": "upper_substrate",
+    "disc": "notched_disc"
+  },
+  "excluded": [
+    "Treated tooth crown, white lesions and the brown-black stripe",
+    "Untreated root reserved for independent comparisons; no root pixels used to fit this implementation",
+    "Unidentified glare, rim glints, shadow/blue streak, dust spots and indistinct background objects"
+  ],
+  "events": {
+    "T006_S0_C01_B01": {
+      "representative": "I0571",
+      "sha256": "b36d1c2c96128d0bc4b0b08762f5f63ab93ef170fa4ac9a939ae0048bb9b04d3",
+      "observed": "Distinct upper substrate at the black fixture boundary across this burst. The very bright corner glint, outline and highlights are excluded.",
+      "regions": {
+        "bed_1": [[272, 1037], [310, 1037], [310, 1069], [272, 1069]],
+        "bed_2": [[355, 896], [394, 896], [394, 928], [355, 928]],
+        "bed_3": [[221, 1158], [259, 1158], [259, 1190], [221, 1190]],
+        "disc_1": [[1731, 1002], [1770, 1002], [1770, 1034], [1731, 1034]],
+        "disc_2": [[1424, 1120], [1462, 1120], [1462, 1152], [1424, 1152]],
+        "disc_3": [[1174, 1024], [1213, 1024], [1213, 1056], [1174, 1056]],
+        "rim_1": [[90, 5], [117, 5], [117, 17], [90, 17]],
+        "rim_2": [[145, 5], [168, 5], [168, 16], [145, 16]],
+        "rim_3": [[201, 5], [225, 5], [225, 15], [201, 15]],
+        "rim_4": [[2530, 3], [2554, 3], [2554, 11], [2530, 11]],
+        "rim_5": [[2582, 4], [2606, 4], [2606, 14], [2582, 14]],
+        "rim_6": [[2630, 6], [2652, 6], [2652, 20], [2630, 20]],
+        "rim_7": [[2657, 7], [2681, 7], [2681, 21], [2657, 21]]
+      }
+    },
+    "T006_S1_C02_B01": {
+      "representative": "I1541",
+      "sha256": "dada79af5bd2290e28a40679a90c630a3f3965b03ce3bc45134fb41e19fccdd9",
+      "observed": "The upper substrate visible in the S0 event is outside the field. Only the dark carrier and notched disc can be identified. Blue/specular streaks have no intrinsic colour match.",
+      "regions": {
+        "bed_1": [[211, 1008], [250, 1008], [250, 1040], [211, 1040]],
+        "bed_2": [[272, 890], [310, 890], [310, 922], [272, 922]],
+        "bed_3": [[160, 1136], [198, 1136], [198, 1168], [160, 1168]],
+        "disc_1": [[1584, 883], [1622, 883], [1622, 915], [1584, 915]],
+        "disc_2": [[1325, 1034], [1363, 1034], [1363, 1066], [1325, 1066]],
+        "disc_3": [[1059, 979], [1098, 979], [1098, 1011], [1059, 1011]]
+      }
+    },
+    "T006_S2_C04_A000_RGB": {
+      "representative": "I2808",
+      "sha256": "5acfaa7088244155e59d5367e56a95124d0288077e6cd2f383765e1196f610c5",
+      "observed": "The upper substrate visible in the S0 event is outside the field. Only the dark carrier and notched disc can be identified. Blue/specular streaks have no intrinsic colour match.",
+      "regions": {
+        "bed_1": [[214, 1005], [253, 1005], [253, 1037], [214, 1037]],
+        "bed_2": [[272, 893], [310, 893], [310, 925], [272, 925]],
+        "bed_3": [[163, 1139], [202, 1139], [202, 1171], [163, 1171]],
+        "disc_1": [[1610, 877], [1648, 877], [1648, 909], [1610, 909]],
+        "disc_2": [[1354, 1030], [1392, 1030], [1392, 1062], [1354, 1062]],
+        "disc_3": [[1088, 976], [1126, 976], [1126, 1008], [1088, 1008]]
+      }
+    },
+    "T007_S0_C01_B03": {
+      "representative": "I0655",
+      "sha256": "a844da3c1a61d59f5db45ad2e569a6e398ebeef7c1a5c9a5d084e9fb77e5f5c1",
+      "observed": "Distinct upper substrate at the black fixture boundary across this burst. The very bright corner glint, outline and highlights are excluded.",
+      "regions": {
+        "bed_1": [[253, 976], [291, 976], [291, 1008], [253, 1008]],
+        "bed_2": [[346, 848], [384, 848], [384, 880], [346, 880]],
+        "bed_3": [[211, 1104], [250, 1104], [250, 1136], [211, 1136]],
+        "disc_1": [[1805, 986], [1843, 986], [1843, 1018], [1805, 1018]],
+        "disc_2": [[1722, 1123], [1760, 1123], [1760, 1155], [1722, 1155]],
+        "disc_3": [[1565, 1040], [1603, 1040], [1603, 1072], [1565, 1072]],
+        "rim_1": [[53, 5], [82, 5], [82, 22], [53, 22]],
+        "rim_2": [[225, 5], [253, 5], [253, 22], [225, 22]],
+        "rim_3": [[305, 5], [330, 5], [330, 16], [305, 16]],
+        "rim_4": [[2510, 3], [2536, 3], [2536, 11], [2510, 11]],
+        "rim_5": [[2573, 4], [2596, 4], [2596, 13], [2573, 13]],
+        "rim_6": [[2620, 4], [2642, 4], [2642, 14], [2620, 14]],
+        "rim_7": [[2656, 5], [2680, 5], [2680, 16], [2656, 16]]
+      }
+    },
+    "T007_S1_C01_B02": {
+      "representative": "I1625",
+      "sha256": "2d1b8499935256da47d27f8c5a11d3e52b885221f483001529fd2e85c29432dc",
+      "observed": "The upper substrate visible in the S0 event is outside the field. Only the dark carrier and notched disc can be identified. Blue/specular streaks have no intrinsic colour match.",
+      "regions": {
+        "bed_1": [[227, 915], [266, 915], [266, 947], [227, 947]],
+        "bed_2": [[304, 803], [342, 803], [342, 835], [304, 835]],
+        "bed_3": [[186, 1027], [224, 1027], [224, 1059], [186, 1059]],
+        "disc_1": [[1587, 749], [1626, 749], [1626, 781], [1587, 781]],
+        "disc_2": [[1654, 922], [1693, 922], [1693, 954], [1654, 954]],
+        "disc_3": [[1478, 960], [1517, 960], [1517, 992], [1478, 992]]
+      }
+    },
+    "T007_S2_C04_A045_RGB": {
+      "representative": "I2885",
+      "sha256": "0ae54927dcde249a66acb15e74ab92acd6ac728bfef714dc9e7edf0757a5d4ba",
+      "observed": "The upper substrate visible in the S0 event is outside the field. Only the dark carrier and notched disc can be identified. Blue/specular streaks have no intrinsic colour match.",
+      "regions": {
+        "bed_1": [[224, 912], [262, 912], [262, 944], [224, 944]],
+        "bed_2": [[307, 790], [346, 790], [346, 822], [307, 822]],
+        "bed_3": [[189, 1024], [227, 1024], [227, 1056], [189, 1056]],
+        "disc_1": [[1613, 778], [1651, 778], [1651, 810], [1613, 810]],
+        "disc_2": [[1651, 950], [1690, 950], [1690, 982], [1651, 982]],
+        "disc_3": [[1488, 986], [1526, 986], [1526, 1018], [1488, 1018]]
+      }
+    },
+    "T008_S0_C01_B01": {
+      "representative": "I0711",
+      "sha256": "6f3380a709857e286f36b0339b67f0f7cbb8eec9be9bded248dc29f592dc59b4",
+      "observed": "Distinct upper substrate at the black fixture boundary across this burst. The very bright corner glint, outline and highlights are excluded.",
+      "regions": {
+        "bed_1": [[237, 1050], [275, 1050], [275, 1082], [237, 1082]],
+        "bed_2": [[326, 864], [365, 864], [365, 896], [326, 896]],
+        "bed_3": [[179, 1158], [218, 1158], [218, 1190], [179, 1190]],
+        "disc_1": [[1638, 1011], [1677, 1011], [1677, 1043], [1638, 1043]],
+        "disc_2": [[1402, 1040], [1440, 1040], [1440, 1072], [1402, 1072]],
+        "disc_3": [[1206, 963], [1245, 963], [1245, 995], [1206, 995]],
+        "rim_1": [[22, 9], [44, 9], [44, 29], [22, 29]],
+        "rim_2": [[59, 10], [86, 10], [86, 33], [59, 33]],
+        "rim_3": [[221, 10], [251, 10], [251, 29], [221, 29]],
+        "rim_4": [[382, 6], [414, 6], [414, 22], [382, 22]],
+        "rim_5": [[1712, 8], [1762, 8], [1762, 28], [1712, 28]],
+        "rim_6": [[2606, 31], [2629, 31], [2629, 49], [2606, 49]],
+        "rim_7": [[2655, 55], [2680, 55], [2680, 78], [2655, 78]]
+      }
+    },
+    "T008_S1_C01_B01": {
+      "representative": "I1681",
+      "sha256": "47abc0c85c45ee0d8a934a36d14bc81dde8d8d127ce21bc6a471fe52efae6193",
+      "observed": "The upper substrate visible in the S0 event is outside the field. Only the dark carrier and notched disc can be identified. Blue/specular streaks have no intrinsic colour match.",
+      "regions": {
+        "bed_1": [[211, 1008], [250, 1008], [250, 1040], [211, 1040]],
+        "bed_2": [[272, 890], [310, 890], [310, 922], [272, 922]],
+        "bed_3": [[160, 1136], [198, 1136], [198, 1168], [160, 1168]],
+        "disc_1": [[1584, 883], [1622, 883], [1622, 915], [1584, 915]],
+        "disc_2": [[1325, 1034], [1363, 1034], [1363, 1066], [1325, 1066]],
+        "disc_3": [[1059, 979], [1098, 979], [1098, 1011], [1059, 1011]]
+      }
+    },
+    "T008_S2_C04_A000_RGB": {
+      "representative": "I2948",
+      "sha256": "88e95d02cd479b39a95b031782f3d474a0cd5cc48f9e57c8d28761f0e52b5aa8",
+      "observed": "The upper substrate visible in the S0 event is outside the field. Only the dark carrier and notched disc can be identified. Blue/specular streaks have no intrinsic colour match.",
+      "regions": {
+        "bed_1": [[214, 1008], [253, 1008], [253, 1040], [214, 1040]],
+        "bed_2": [[275, 890], [314, 890], [314, 922], [275, 922]],
+        "bed_3": [[163, 1136], [202, 1136], [202, 1168], [163, 1168]],
+        "disc_1": [[1597, 886], [1635, 886], [1635, 918], [1597, 918]],
+        "disc_2": [[1338, 1030], [1376, 1030], [1376, 1062], [1338, 1062]],
+        "disc_3": [[1072, 976], [1110, 976], [1110, 1008], [1072, 1008]]
+      }
+    }
+  }
+}

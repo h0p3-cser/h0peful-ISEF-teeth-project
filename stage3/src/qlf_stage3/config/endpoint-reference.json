@@ -1,0 +1,46 @@
+{
+  "pairs": 873,
+  "groups": 127,
+  "seeds": [
+    42,
+    123,
+    2024
+  ],
+  "features_sha256": "db3d3a04bda1d37ea655c2e7c8d3cb08094729591fb0bc187eab09306d27efd5",
+  "branches": {
+    "gray": {
+      "M1": {
+        "macro_f1": 0.7038907594463151,
+        "correct": 91,
+        "s1_correct": 21
+      },
+      "M2": {
+        "macro_f1": 0.7527244360577694,
+        "correct": 98,
+        "s1_correct": 24
+      },
+      "M3": {
+        "macro_f1": 0.8587069309291531,
+        "correct": 110,
+        "s1_correct": 32
+      }
+    },
+    "rgb": {
+      "M1": {
+        "macro_f1": 0.7631407686963243,
+        "correct": 98,
+        "s1_correct": 29
+      },
+      "M2": {
+        "macro_f1": 0.7527244360577694,
+        "correct": 98,
+        "s1_correct": 24
+      },
+      "M3": {
+        "macro_f1": 0.9019509297287074,
+        "correct": 115,
+        "s1_correct": 35
+      }
+    }
+  }
+}

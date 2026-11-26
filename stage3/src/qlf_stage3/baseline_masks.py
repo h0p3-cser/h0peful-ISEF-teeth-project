@@ -17,6 +17,7 @@ import cv2
 import numpy as np
 
 from .settings import PROJECT
+from .image_io import read_image, write_png
 DATA = PROJECT / "Data"
 OUTPUT = DATA / "语义掩膜_背景与基线黑斑"
 MANUAL = PROJECT / "runs/qlf_paired_analysis_20261123/QLF_五角度损失热图/剔除S0黑斑"
@@ -58,8 +59,8 @@ def read_frame(row, stage):
     mask_path=DATA/"masks"/path.with_suffix(".png")
     if row["state"]=="S2":
         mask_path=stage/f"sam_{row['modality'].lower()}"/Path(*path.parts[1:]).with_suffix(".png")
-    rgb=cv2.imread(str(DATA/path),cv2.IMREAD_COLOR|cv2.IMREAD_IGNORE_ORIENTATION)
-    mask=cv2.imread(str(mask_path),cv2.IMREAD_GRAYSCALE)
+    rgb=read_image(DATA/path,cv2.IMREAD_COLOR|cv2.IMREAD_IGNORE_ORIENTATION)
+    mask=read_image(mask_path,cv2.IMREAD_GRAYSCALE)
     if rgb is None or mask is None or rgb.shape[:2]!=mask.shape or not np.any(mask):
         raise ValueError(f"Unreadable image or mask: {path}")
     return rgb,mask
@@ -119,8 +120,7 @@ def describe(q):
 def output_mask(row,mask):
     dest=OUTPUT/"标签"/row["path"].with_suffix(".png")
     dest.parent.mkdir(parents=True,exist_ok=True)
-    if not cv2.imwrite(str(dest),mask,[cv2.IMWRITE_PNG_COMPRESSION,3]):
-        raise OSError(f"Cannot write {dest}")
+    write_png(dest,mask)
     return dest.relative_to(OUTPUT).as_posix()
 
 
@@ -202,7 +202,7 @@ def process(rows,scope,stage,manual,reviews,landmark_review):
     src=next((r for r in bases if r["path"].as_posix() in manual),bases[3])
     sf,pts,smask=pack(src,stage)
     if src["path"].as_posix() in manual:
-        dark=cv2.imread(str(manual[src["path"].as_posix()]),cv2.IMREAD_GRAYSCALE)>0
+        dark=read_image(manual[src["path"].as_posix()],cv2.IMREAD_GRAYSCALE)>0
         assert dark.shape==smask.shape and np.all(~dark|(smask>0))
         source="manual_s0_qlf"
     else:
@@ -288,7 +288,7 @@ def main():
     args.add_argument("--landmark-review",action="store_true")
     opts=args.parse_args()
     cv2.setNumThreads(1)
-    source=json.loads((opts.manual_root/"掩膜与指标记录.json").read_text())["samples"]
+    source=json.loads((opts.manual_root/"掩膜与指标记录.json").read_text(encoding="utf-8"))["samples"]
     manual={r["s0_image"]:opts.manual_root/"新掩膜"/r["array"]/"S0黑斑排除区.png" for r in source}
     groups=inventory()
     assert len(groups)==90 and sum(map(len,groups.values()))==2240
@@ -296,7 +296,7 @@ def main():
     old={}
     reviews=None
     if opts.review_only or opts.landmark_review:
-        old={r["path"]:r for r in map(json.loads,index.read_text().splitlines())}
+        old={r["path"]:r for r in map(json.loads,index.read_text(encoding="utf-8").splitlines())}
         reviews={key for key,row in old.items() if row["status"]=="registration_review_required"}
         groups={key:rr for key,rr in groups.items()
                 if any(r["path"].as_posix() in reviews for r in rr)}

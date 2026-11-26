@@ -1,0 +1,19 @@
+* text=auto
+.gitattributes text eol=lf
+.gitignore text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.lock text eol=lf
+*.cff text eol=lf
+MANIFEST.in text eol=lf
+*.png binary
+LICENSE -text
+# Preserve the registered bytes of the two historical region manifests.
+src/qlf_stage3/config/rgb_bstar_regions_v1.json -text diff whitespace=cr-at-eol
+src/qlf_stage3/config/rgb_patch_huber_regions_v1.json -text diff whitespace=cr-at-eol
+# The pinned protocol uses Markdown's two-space hard line break.
+src/qlf_stage3/config/rgb-patch-huber-protocol-v1.md whitespace=-blank-at-eol
