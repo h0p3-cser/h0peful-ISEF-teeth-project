@@ -30,7 +30,7 @@ class PortableTests(unittest.TestCase):
             root = Path(temp) / "input"
             with self.assertRaisesRegex(ValueError, "outside"):
                 outside_inputs(root / "outputs", root)
-            self.assertEqual(outside_inputs(Path(temp) / "run", root), Path(temp) / "run")
+            self.assertEqual(outside_inputs(Path(temp) / "run", root), Path(temp).resolve() / "run")
             with self.assertRaisesRegex(ValueError, "Missing"):
                 dataset_info(root)
 
